@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ColorButton({color,text,onClick}) {
+function ColorButton({color,text,onClick,fill=false}) {
     const style={
        
     }
@@ -9,12 +9,13 @@ function ColorButton({color,text,onClick}) {
             width:'100px',
             height:'50px',
             border:`3px solid ${color}`,
-            borderRadius:'15px'
+            borderRadius:'15px',
+            backgroundColor:fill?color:'none'
         }}
-        onClick={()=>onClick(color)}>
+        onClick={()=>onClick(text)}>
             <p style={{
                 textAlign:'center',
-                color:color,
+                color:fill?'white':color,
                 font:'icon',
                 fontWeight:'bold',
                 cursor:'pointer'

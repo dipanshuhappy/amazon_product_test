@@ -1,6 +1,7 @@
 import React from 'react';
 
 function Time() {
+  const today=new Date()
     return (
         <svg >
         <text
@@ -11,7 +12,7 @@ function Time() {
           y='50%'
           className="small"
         >
-          {"sfd"}
+          {today.getHours()} : {today.getMinutes()}
         </text>
       </svg>
     );
