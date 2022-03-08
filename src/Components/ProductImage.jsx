@@ -3,7 +3,7 @@ import Watch from './Watch';
 
 function ProductImage({color,children}) {
     return (
-        <div>
+        <div className='productImage'>
             <Watch color={color}>{children}</Watch>
         </div>
     );

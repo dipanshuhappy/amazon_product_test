@@ -10,20 +10,7 @@ function App() {
   const [color,setColor]=useState('black')
   const [type,setType]=useState('time')
   const onClick=(newColor)=>setColor(newColor)
-  const onTypeClick=newType=>{
-    console.log(newType
-      )
-    setType(newType)
-  }
-  const getNeededType=()=>{
-    if (type==='time'){
-      return <Time/>
-    }
-    else{
-      return <Heart/>
-    }
-
-  }
+  const onTypeClick=newType=>setType(newType)
   return (
     <div className="App">
      <TopBar>
@@ -32,12 +19,24 @@ function App() {
      <ProductImage color={color}>{
         type==='time'?<Time/>:<Heart/>
      }</ProductImage>
+     <div className='main'>
+          <h1>FitBit 19 - The Smartest Watch</h1>
+          <h3>Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor</h3>
+
+
+     </div>
+     <div className='colorBtn'>
+    <h2>Select color</h2>
      <ColorButton color="red" text="red" onClick={onClick}/>
      <ColorButton color="blue" text="blue" onClick={onClick}/>
      <ColorButton color="black" text="black" onClick={onClick}/>
      <ColorButton color="orange" text="orange" onClick={onClick}/>
+     </div>
+     <div className='typeBtn'>
+       <h2>Select type</h2>
      <ColorButton color="black" fill text="time" onClick={onTypeClick}/>
      <ColorButton color="black" fill text="heart" onClick={onTypeClick}/>
+     </div>
     </div>
   );
 }
