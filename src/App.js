@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
      <TopBar>
-      <img className='amazonImage' src='/amazon.png' height={50}/>
+      <img className='amazonImage' src='/amazon.png' height={50} alt="amazon"/>
      </TopBar>
      <ProductImage color={color}>{
         type==='time'?<Time/>:<Heart/>
